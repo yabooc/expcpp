@@ -19,3 +19,5 @@ Class CppTest.UnitTest: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     get_TestContext(): PrivateScope, Public, HideBySig, SpecialName
     set_TestContext(TestContext): PrivateScope, Public, HideBySig, SpecialName
     TestMethod1(): PrivateScope, Public, HideBySig
+    VectorTest(): PrivateScope, Public, HideBySig
+    PtrTest(): PrivateScope, Public, HideBySig
