@@ -1,0 +1,8 @@
+home/ipch/*
+home/Release/*
+home/CppTest/Debug/*
+home/CppTest/Release/*
+home/Debug/*
+home/Debug/*
+home/Debug/DefaultTest.pdb
+home/home.opensdf
