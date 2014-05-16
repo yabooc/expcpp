@@ -20,4 +20,20 @@ namespace NativeCppTest
     {
         Microsoft::VisualStudio::CppUnitTestFramework::Logger::WriteMessage(t);
     }
+
+    class tout
+    {
+    public:
+        template<typename T>
+        inline void operator<<(T t)
+        {
+            std::stringstream ss;
+            ss << t;
+            std::istreambuf_iterator<char> eos;
+            std::string s(std::istreambuf_iterator<char>(ss), eos);
+            s += "\n";
+            Microsoft::VisualStudio::CppUnitTestFramework::Logger::WriteMessage(s.c_str());
+        }
+    };
+    extern tout t;
 }

@@ -31,12 +31,12 @@ namespace NativeCppTest
             std::future<int> asyncresult = std::async(std::launch::async, [&i]()->int{return i; });
             std::this_thread::sleep_for(std::chrono::seconds(1));
             i = 2;
-            output(asyncresult.get()); // result is 0. Why? std::async is finished before i=2.
+            t << asyncresult.get(); // result is 0. Why? std::async is finished before i=2.
 
             auto deferredresult = std::async(std::launch::deferred, [&i]()->int{return i; });
             std::this_thread::sleep_for(std::chrono::seconds(1));
             i = 3;
-            output(deferredresult.get()); // result is 3. Why? std::async just started when get().
+            t << deferredresult.get(); // result is 3. Why? std::async just started when get().
         }
     };
 }
