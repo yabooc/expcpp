@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Async.cpp" />
+    <ClCompile Include="Move.cpp" />
     <ClCompile Include="output.cpp" />
     <ClCompile Include="OutputTest.cpp" />
     <ClCompile Include="stdafx.cpp">
